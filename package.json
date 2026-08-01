@@ -1,0 +1,35 @@
+{
+  "name": "@greatnxy/web-search-mcp",
+  "version": "0.0.0",
+  "description": "A search-only MCP server with Tavily and Brave.",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NXY666/web-search-mcp.git"
+  },
+  "bin": {
+    "web-search": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "test": "tsx --test test/**/*.test.ts",
+    "check": "tsc --noEmit -p tsconfig.json"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.30.0",
+    "zod": "4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^24.13.3",
+    "tsx": "4.23.1",
+    "typescript": "7.0.2"
+  }
+}
